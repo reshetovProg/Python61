@@ -1,1 +1,2 @@
-print("chjwghwe\nkgf")
+name = "Vasia"
+print(f"{name}")
