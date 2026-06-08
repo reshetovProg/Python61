@@ -109,4 +109,5 @@ while n>0:
     num=int(input("введите число: "))
     s+=num
     n-=1
+>>>>>>> origin/master
 print(s)
