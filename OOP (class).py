@@ -15,14 +15,15 @@ class Car:
 
     @age.setter
     def age(self, new_value):
-        if new_value<0 or new_value<self.__age:
+        if new_value<0 or new_value<self.age:
             raise ValueError("не корректный возраст")
         self.__age=new_value
 
 
 car1 = Car("merc",0,2000000)
 print(car1.age)
-car1.age = 8
+car1.age = -90
+print(car1.age)
 
 
 
