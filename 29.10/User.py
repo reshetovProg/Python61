@@ -18,6 +18,7 @@ class User:
     def create_order(self, depart, destination):
         if not self.order:
             self.order = Order(depart, destination, self.id)
+            self.__count_of_orders+=1
 
 if __name__ == '__main__':
     car1 = Taxi("a678po", "Alex", "red", "Opel")

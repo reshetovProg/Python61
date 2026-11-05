@@ -17,6 +17,11 @@ def show_all_taxi():
     for i in cars:
         print(i)
 
+def show_all_free_taxi():
+    for i in cars:
+        if not i.status:
+            print(i)
+
 def get_free_taxi():
     for i in cars:
         if not i.status:
