@@ -1,4 +1,5 @@
 from Taxi import *
+from User import *
 class File:
     def __init__(self, filename):
         self.filename=filename
@@ -17,3 +18,13 @@ if __name__ == '__main__':
         car = cars_lines[i].split(',')
         Taxi(car[0],car[1],car[2],car[3])
     show_all_taxi()
+
+
+    user_db = File("user.csv")
+    users_lines = user_db.get_lines()
+    for i in range(1, len(users_lines)):
+        User(users_lines[i])
+    show_all_users()
+
+
+

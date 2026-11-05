@@ -1,4 +1,11 @@
 from Order import *
+
+users = set()
+
+def show_all_users():
+    for i in users:
+        print(i)
+
 class User:
     __user_counter = 1
     def __init__(self, name):
@@ -7,6 +14,7 @@ class User:
         self.__count_of_orders = 0
         self.order=None
         User.__user_counter+=1
+        users.add(self)
 
     def __str__(self):
         return f"{self.id}: {self.name}| {self.__count_of_orders}"
