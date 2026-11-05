@@ -1,8 +1,12 @@
 from User import *
 
 if __name__ == '__main__':
-    user1 = User("Pol")
-    user2 = User("Alex")
-    print(user1)
-    print(user2)
-    print("m678ma")
+    user = User("Alex")
+    '''
+    1 - заказать такси
+    2 - посмотреть свободные машины
+    3 - посмотреть профиль пользователя
+    4 - посмотреть заказ
+    '''
+
+

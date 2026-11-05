@@ -1,32 +1,29 @@
+from Order import *
 class User:
     __user_counter = 1
     def __init__(self, name):
         self.id = User.__user_counter
         self.name = name
-        self.__order = 0
+        self.__count_of_orders = 0
+        self.order=None
         User.__user_counter+=1
 
     def __str__(self):
-        return f"{self.id}: {self.name}| {self.__order}"
-
-    def add_order(self):
-        self.__order+=1
+        return f"{self.id}: {self.name}| {self.__count_of_orders}"
 
     @staticmethod
     def get_user_count():
         return (User.__user_counter)-1
 
-if __name__ == '__main__':
-    def show_all(users: list[User]):
-        for i in users:
-            print(i)
+    def create_order(self, depart, destination):
+        if not self.order:
+            self.order = Order(depart, destination, self.id)
 
-    print(f"текст в классе User: {__name__}")
+if __name__ == '__main__':
+    car1 = Taxi("a678po", "Alex", "red", "Opel")
+    car3 = Taxi("a678oo", "Pol", "red", "Opel")
+    car4 = Taxi("a678om", "Pol", "red", "Opel")
+
     user1 = User("Pol")
-    user2 = User("Alex")
-    user3 = User("Genry")
-    users = [user1, user2, user3]
-    show_all(users)
-    print("----")
-    user3.add_order()
-    show_all(users)
+    user1.create_order("1","2")
+    print(user1.order)
