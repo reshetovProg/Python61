@@ -2,6 +2,11 @@ from Order import *
 
 users = set()
 
+def get_first_user():
+    for user in users:
+        if user.id==1:
+            return user
+
 def show_all_users():
     for i in users:
         print(i)
@@ -18,6 +23,10 @@ class User:
 
     def __str__(self):
         return f"{self.id}: {self.name}| {self.__count_of_orders}"
+
+    @property
+    def count_of_orders(self):
+        return self.__count_of_orders
 
     @staticmethod
     def get_user_count():
